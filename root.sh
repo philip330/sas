@@ -32,7 +32,7 @@ case $install_ubuntu in
   [yY][eE][sS])
     wget --tries=$max_retries --timeout=$timeout --no-hsts -O /tmp/rootfs.tar.gz \
       "http://cdimage.ubuntu.com/ubuntu-base/releases/24.04/release/ubuntu-base-24.04.1-base-${ARCH_ALT}.tar.gz"
-    tar -xvzf /tmp/rootfs.tar.gz -C $ROOTFS_DIR
+    tar -xf /tmp/rootfs.tar.gz -C $ROOTFS_DIR
     ;;
   *)
     echo "Skipping Ubuntu installation."
